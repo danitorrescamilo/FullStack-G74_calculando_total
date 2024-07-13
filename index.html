@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 1 - Calculando Total JS</title>
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <h1>#CyberGamer</h1>
+            <div class="img-card"></div>
+              <h6>Laptop Gamer AMD</h6>
+              <p>Precio base: $<span class="precio-inicial"></span> </p>
+        
+              <p>Cantidad:
+                <span class="cantidad">0</span>
+                <!-- Aumentar -->
+                <button onclick="
+                cantidad = document.querySelector('.cantidad')
+                aumentar = Number(cantidad.innerHTML)
+                aumentar = aumentar + 1
+                cantidad.innerHTML = aumentar
+
+                total = document.querySelector('.valor-total')
+                total.innerHTML = aumentar * precio"
+                > + </button>
+
+                <!-- Bajar -->
+                <button onclick="
+                cantidad = document.querySelector('.cantidad')
+                bajar = Number(cantidad.innerHTML)
+                bajar = bajar - 1
+                cantidad.innerHTML = bajar
+
+                total = document.querySelector('.valor-total')
+                total.innerHTML = bajar * precio"
+                > - </button>
+
+              </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total"></span> </p>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+
+</body>
+</html>
